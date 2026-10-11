@@ -1,6 +1,6 @@
-# Regenerates the contribution snake and the activity graph every day and
-# publishes them to the `output` branch, which the README images point to.
-name: Update profile graphics
+# Regenerates the contribution snake every day and publishes it to the
+# `output` branch, which the README's snake image points to.
+name: Generate snake
 
 on:
   schedule:
@@ -13,12 +13,9 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  snake:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
       - name: Generate contribution snake
         uses: Platane/snk@v3
         with:
@@ -27,14 +24,11 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      - name: Generate activity graph
-        run: python scripts/activity_graph.py dist/github-activity-graph.svg 5
-
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "chore: update profile graphics"
+          commit_message: "chore: update contribution snake"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

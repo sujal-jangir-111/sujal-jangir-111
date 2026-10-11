@@ -70,10 +70,10 @@ I'm currently building strong foundations in **machine learning** and diving dee
   </tr>
 </table>
 
-## 📈 Activity
+## 📈 Activity 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/sujal-jangir-111/sujal-jangir-111/output/github-activity-graph.svg" alt="Contribution graph (last 90 days)" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sujal-jangir-111&bg_color=1a1b27&color=7aa2f7&line=bb9af7&point=7aa2f7&area=true&area_color=bb9af7&hide_border=true&days=60&height=280" alt="Contribution graph" width="100%" />
 </div>
 
 <div align="center">
